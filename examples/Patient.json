@@ -1,0 +1,168 @@
+{
+  "resourceType": "Patient",
+  "id": "BP.0091058414",
+  "meta": {
+    "profile": [
+      "http://fhir.leumit.co.il/StructureDefinition/leumit-patient"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "patientDemographics",
+        "display": "דמוגרפיה"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+      "valueAddress": {
+        "country": "380Ukraine"
+      }
+    },
+    {
+      "url": "http://fhir.leumit.co.il/StructureDefinition/ExtInfoApproved",
+      "valueIdentifier": {
+        "system": "http://fhir.leumit.co.il/Identifier/fict-patient",
+        "value": "731908497"
+      }
+    },
+    {
+      "url": "http://fhir.leumit.co.il/StructureDefinition/ExtPopulationType",
+      "valueCode": "01"
+    },
+    {
+      "url": "http://fhir.leumit.co.il/StructureDefinition/ExtFamilyHead",
+      "valueIdentifier": {
+        "system": "http://fhir.leumit.co.il/Identifier/fict-patient",
+        "value": "731908497"
+      }
+    },
+    {
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-il-hmo",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/paying-entity-moh",
+            "code": "102"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "secondary",
+      "system": "http://fhir.leumit.co.il/Identifier/fict-patient",
+      "value": "731908497"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PPN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "http://fhir.leumit.co.il/Identifier/no-system",
+      "_system": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      },
+      "value": "CB523561"
+    }
+  ],
+  "name": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "given": [
+        "MARIA"
+      ],
+      "family": "KAI"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "he"
+        }
+      ],
+      "given": [
+        "MARIA"
+      ],
+      "family": "KAI"
+    }
+  ],
+  "birthDate": "1936-05-29",
+  "gender": "unknown",
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "code": "UNK",
+        "display": "unknown"
+      }
+    ]
+  },
+  "address": [
+    {
+      "type": "physical",
+      "_city": {
+        "extension": [
+          {
+            "url": "http://fhir.health.gov.il/StructureDefinition/ext-city-code",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.health.gov.il/cs/city-symbol",
+                  "code": "9999"
+                }
+              ],
+              "text": "9999"
+            }
+          }
+        ]
+      },
+      "line": [
+        "?? ????? P.O.Box:"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "?? ?????"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "postal"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "054-5555555"
+    },
+    {
+      "system": "phone",
+      "value": "053-2454647"
+    },
+    {
+      "system": "sms",
+      "value": "054-5555555"
+    }
+  ]
+}

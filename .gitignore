@@ -3,7 +3,9 @@ Thumbs.db
 /fsh-generated
 /input-cache
 /output
+/differentials
 /temp
 /template
 /jre
 /node_modules
+validator_cli*
