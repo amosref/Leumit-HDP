@@ -69,7 +69,6 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * reasonCode[moh-reason-code].coding.system 1..1
 * reasonCode[moh-reason-code].coding.code 1..1
 * reasonCode[moh-reason-code].coding.display 1..1
-* reasonCode[leumit-reason-code] from $vs-patient-visit-reason-leumit (required)
 * reasonCode[leumit-reason-code].coding 1..*
 * reasonCode[leumit-reason-code].coding.system 1..1
 * reasonCode[leumit-reason-code].coding.system = $patient-visit-reason-leumit (exactly)
