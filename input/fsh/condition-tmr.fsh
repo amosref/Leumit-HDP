@@ -1,5 +1,6 @@
 Profile: LeumitDiagTmr
-Parent: il-hdp-condition 
+// Parent: il-hdp-condition 
+Parent: il-core-condition 
 Id: leumit-diag-tmr
 Title: "Leumit Diagnosis Tamar"
 Description: "Leumit Diagnosis records - Source System:Tamar"
@@ -49,3 +50,4 @@ Description: "Leumit Diagnosis records - Source System:Tamar"
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status" (exactly)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category" (exactly)
 * severity.coding.system = "http://snomed.info/sct" (exactly)
+* insert ConformanceMetadata

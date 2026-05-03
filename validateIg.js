@@ -32,6 +32,8 @@ const readResults = async () => {
 
 const runValidate = async () => {
     deleteIgResource();
+    console.log('java:', java);
+    console.log('jar:', jar);
     if (java && jar) {
         const args = ['-Dfile.encoding=UTF-8', '-jar', jar, diffFolder, '-version', getFhirVersion(), '-jurisdiction', 'global', '-ig', igFolder]
             .concat(getDependencies(sushiConfig))

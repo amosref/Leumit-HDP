@@ -41,13 +41,14 @@ const getJreVersionPath = () => {
     return undefined;
 };
 
-export const getJreBin = () => {
-    const versionPath = getJreVersionPath();
-    if (versionPath) {
-        return path.join(versionPath, 'bin', 'java');
-    };
-    return undefined;
-};
+// export const getJreBin = () => {
+//     const versionPath = getJreVersionPath();
+//     if (versionPath) {
+//         return path.join(versionPath, 'bin', 'java');
+//     };
+//     return undefined;
+// };
+export const getJreBin = () => 'java';
 
 export const getValidatorPath = () => {
     return path.join(workingDir, 'validator_cli.jar');
