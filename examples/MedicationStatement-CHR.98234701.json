@@ -1,0 +1,120 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "CHR.98234701",
+  "meta": {
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-statement",
+      "http://fhir.leumit.co.il/StructureDefinition/med-statement-chronic"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "medications",
+        "display": "תרופות"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "chronic",
+            "system": "http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type",
+            "display": "Chronic therapy"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.leumit.co.il/identifier/tamar-chronic",
+      "value": "98234701"
+    }
+  ],
+  "statusReason": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.leumit.co.il/cs/tamar-status",
+          "code": "0",
+          "display": "פעיל"
+        }
+      ]
+    }
+  ],
+  "category": {
+    "coding": [
+      {
+        "code": "community-hmo",
+        "system": "http://fhir.health.gov.il/cs/il-core-medication-statement-category",
+        "display": "Community-hmo"
+      }
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://yarpa.co.il/catalog",
+        "userSelected": true,
+        "code": "29055",
+        "display": "ATORVASTATIN TEVA 20 MG TABLETS"
+      }
+    ],
+    "text": "אטורבסטטין 20 מ\"ג"
+  },
+  "subject": {
+    "reference": "Patient/BP.0091058414"
+  },
+  "context": {
+    "reference": "Encounter/leumit-enc-556201"
+  },
+  "informationSource": {
+    "reference": "Practitioner/leumit-prac-44210"
+  },
+  "dosage": [
+    {
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2024-03-15"
+          },
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://fhir.leumit.co.il/cs/med-route",
+            "userSelected": true,
+            "code": "PO",
+            "display": "דרך הפה"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "userSelected": false,
+            "code": "26643006",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 20,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "active",
+  "effectiveDateTime": "2024-03-15",
+  "dateAsserted": "2024-03-15T10:30:00+02:00"
+}

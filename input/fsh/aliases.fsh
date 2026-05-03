@@ -18,6 +18,7 @@ Alias: $info-buckets = http://fhir.health.gov.il/cs/il-hdp-information-buckets
 Alias: $LeumitBodySite = http://fhir.leumit.co.il/cs/body-site
 Alias: $LeumitSpecimenType = http://fhir.leumit.co.il/cs/specimen-type
 Alias: $leumit-units-of-measure = http://fhir.leumit.co.il/cs/unit-of-measure
+Alias: $ucum = http://unitsofmeasure.org
 
 
 Alias: $vs-snomed-ct = http://fhir.leumit.co.il/ValueSet/all-snomed-codes
