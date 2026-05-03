@@ -1,7 +1,7 @@
-Profile: LeumitEncounter
-Parent: il-core-encounter
-Id: leumit-encounter
-Title: "Leumit Encounter Profile"
+Profile: LeumitILHDPEncounterCommunityHMOAmbulatory
+Parent: http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory
+Id: leumit-encounter-community-hmo-ambulatory
+Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * meta 1..1
 * meta.profile 2..*
 * meta.profile ^slicing.discriminator.type = #value
