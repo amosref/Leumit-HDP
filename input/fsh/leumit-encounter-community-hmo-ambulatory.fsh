@@ -8,8 +8,8 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
 * meta.profile contains
-   il-core 1..1 and
-   leumit 1..1
+   il-hdp-encounter-community-hmo-ambulatory 1..1 and
+   leumit-encounter-community-hmo-ambulatory 1..1
 * meta.profile[il-hdp-encounter-community-hmo-ambulatory] 1..1
 * meta.profile[il-hdp-encounter-community-hmo-ambulatory] = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory" (exactly)
 * meta.profile[leumit-encounter-community-hmo-ambulatory] 1..1
