@@ -10,10 +10,10 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * meta.profile contains
    il-core 1..1 and
    leumit 1..1
-* meta.profile[il-core] 1..1
-* meta.profile[il-core] = "http://fhir.health.gov.il/StructureDefinition/il-core-encounter" (exactly)
-* meta.profile[leumit] 1..1
-* meta.profile[leumit] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter" (exactly)
+* meta.profile[il-hdp-encounter-community-hmo-ambulatory] 1..1
+* meta.profile[il-hdp-encounter-community-hmo-ambulatory] = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory" (exactly)
+* meta.profile[leumit-encounter-community-hmo-ambulatory] 1..1
+* meta.profile[leumit-encounter-community-hmo-ambulatory] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter-community-hmo-ambulatory" (exactly)
 * identifier.system 1..1
 * identifier.value 1..1
 * class.system 1..1
