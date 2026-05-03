@@ -24,12 +24,20 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * type.coding ^slicing.discriminator.path = "$this"
 * type.coding ^slicing.rules = #open
 * type.coding contains
-    tamar 1..1 and
     snomed 1..1 
-* type.coding[tamar] from $vs-tamar-visit-types (required)
-* type.coding[tamar].system 1..1
-* type.coding[tamar].system = $tamar-visit-types (exactly)
-* type.coding[tamar].code 1..1
+
+* type.coding[tamar-sys].system 1..1
+* type.coding[tamar-sys].system = $tamar-visit-types (exactly)
+* type.coding[tamar-sys].code 1..1
+
+* type.coding[or-sys].system 1..1
+* type.coding[or-sys].system = $or-visit-types (exactly)
+* type.coding[or-sys].code 1..1
+
+* type.coding[suppliers-sys].system 1..1
+* type.coding[suppliers-sys].system = $suppliers-visit-types (exactly)
+* type.coding[suppliers-sys].code 1..1
+
 * type.coding[snomed] from $vs-snomed-ct (required)
 * type.coding[snomed].system 1..1
 * type.coding[snomed].system = $sct (exactly)

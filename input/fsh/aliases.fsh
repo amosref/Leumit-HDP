@@ -8,6 +8,7 @@ Alias: $PracId = http://fhir.leumit.co.il/Identifier/PracId
 Alias: $identifierType = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $tamar-visit-types = http://fhir.leumit.co.il/CodeSystem/tamar-visit-types
 Alias: $or-visit-types = http://fhir.leumit.co.il/CodeSystem/or-visit-types
+Alias: $suppliers-visit-types = http://fhir.leumit.co.il/CodeSystem/suppliers-visit-types
 Alias: $expertise-code = http://fhir.leumit.co.il/CodeSystem/expertise-code
 Alias: $patient-visit-reason-leumit = http://fhir.leumit.co.il/CodeSystem/patient-visit-reason-leumit
 Alias: $visit-expertise-vs = http://fhir.leumit.co.il/ValueSet/visit-expertise
