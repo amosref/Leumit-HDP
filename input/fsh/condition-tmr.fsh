@@ -45,4 +45,9 @@ Description: "Leumit Diagnosis records - Source System:Tamar"
 * encounter.reference 1..1
 
 * recorder.reference 1..1
+
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical" (exactly)
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status" (exactly)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category" (exactly)
+* severity.coding.system = "http://snomed.info/sct" (exactly)
 * insert ConformanceMetadata
