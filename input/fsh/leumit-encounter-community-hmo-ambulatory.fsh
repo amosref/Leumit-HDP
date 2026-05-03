@@ -35,7 +35,6 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * type.coding[snomed].system = $sct (exactly)
 * type.coding[snomed].code 1..1
 
-* serviceType 0..1
 * serviceType ^short = "Service type"
 * serviceType.coding 2..2
 * serviceType.coding ^slicing.discriminator.type = #value
