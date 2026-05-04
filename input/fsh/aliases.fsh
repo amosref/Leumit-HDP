@@ -55,6 +55,9 @@ Alias: $leumit-lab-test-instructions = http://fhir.leumit.co.il/cs/lab-test-inst
 Alias: $leumit-confidentiality = http://fhir.leumit.co.il/cs/confidentiality
 Alias: $leumit-lab-test-referral-status = http://fhir.leumit.co.il/cs/lab-test-referral-status-reason
 Alias: $leumit-lab-test-order-status = http://fhir.leumit.co.il/cs/lab-test-order-status
+Alias: $leumit-allergy-intolerance-code = http://fhir.leumit.co.il/cs/AllergyIntoleranceCode
+Alias: $leumit-substance = http://fhir.leumit.co.il/cs/Substance
+Alias: $leumit-manifestation = http://fhir.leumit.co.il/cs/Manifestation
 
 Alias: $vs-leumit-lab-test-code = http://fhir.leumit.co.il/ValueSet/lab-test-code
 Alias: $vs-leumit-specimen-group = http://fhir.leumit.co.il/ValueSet/specimen-group
@@ -63,3 +66,10 @@ Alias: $vs-leumit-lab-test-instructions = http://fhir.leumit.co.il/ValueSet/lab-
 Alias: $vs-leumit-confidentiality = http://fhir.leumit.co.il/ValueSet/confidentiality
 Alias: $vs-leumit-lab-test-referral-status = http://fhir.leumit.co.il/ValueSet/lab-test-referral-status-reason
 Alias: $vs-leumit-lab-test-order-status = http://fhir.leumit.co.il/ValueSet/lab-test-order-status
+Alias: $vs-leumit-allergy-intolerance-code = http://fhir.leumit.co.il/ValueSet/AllergyIntoleranceCode
+Alias: $vs-leumit-substance = http://fhir.leumit.co.il/ValueSet/Substance
+Alias: $vs-leumit-manifestation = http://fhir.leumit.co.il/ValueSet/Manifestation
+
+Alias: $vs-il-core-allergy-intolerance-code = http://fhir.health.gov.il/ValueSet/il-core-allergy-intolerance-code
+Alias: $vs-il-core-substance = http://fhir.health.gov.il/ValueSet/il-core-substance
+Alias: $vs-il-core-manifestation = http://fhir.health.gov.il/ValueSet/il-core-manifestation
