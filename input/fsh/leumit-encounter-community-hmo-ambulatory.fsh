@@ -69,7 +69,6 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * serviceType.coding[leumit].code 1..1
 * serviceType.coding[leumit].display 1..1
 
-* subject 1..1
 * subject.reference 1..1
 
 * participant[primary-performer] 1..1
