@@ -72,8 +72,8 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * subject 1..1
 * subject.reference 1..1
 
-* participant 1..*
 * participant[primary-performer] 1..1
+
 * period 1..1
 * period.start 1..1
 * period.end 1..1
