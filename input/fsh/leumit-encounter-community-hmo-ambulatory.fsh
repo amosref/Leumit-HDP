@@ -10,8 +10,9 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * meta.profile contains
    il-hdp-encounter-community-hmo-ambulatory 1..1 and
    leumit-encounter-community-hmo-ambulatory 1..1
-* meta.profile[il-hdp-encounter-community-hmo-ambulatory] 1..1
-* meta.profile[il-hdp-encounter-community-hmo-ambulatory] = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory" (exactly)
+// Redundant as parent as already il-hdp-encounter-community-hmo-ambulatory and will cause unnecesary validation operation
+// * meta.profile[il-hdp-encounter-community-hmo-ambulatory] 1..1
+// * meta.profile[il-hdp-encounter-community-hmo-ambulatory] = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory" (exactly)
 * meta.profile[leumit-encounter-community-hmo-ambulatory] 1..1
 * meta.profile[leumit-encounter-community-hmo-ambulatory] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter-community-hmo-ambulatory" (exactly)
 * identifier.system 1..1
@@ -24,7 +25,15 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * type.coding ^slicing.discriminator.path = "$this"
 * type.coding ^slicing.rules = #open
 * type.coding contains
-    snomed 1..1 
+    snomed 1..1 and
+    tamar-sys 0..1 and
+    or-sys 0..1 and
+    suppliers-sys 0..1
+
+* type.coding[snomed] from $vs-snomed-ct (required)
+* type.coding[snomed].system 1..1
+* type.coding[snomed].system = $sct (exactly)
+* type.coding[snomed].code 1..1
 
 * type.coding[tamar-sys].system 1..1
 * type.coding[tamar-sys].system = $tamar-visit-types (exactly)
@@ -37,11 +46,6 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * type.coding[suppliers-sys].system 1..1
 * type.coding[suppliers-sys].system = $suppliers-visit-types (exactly)
 * type.coding[suppliers-sys].code 1..1
-
-* type.coding[snomed] from $vs-snomed-ct (required)
-* type.coding[snomed].system 1..1
-* type.coding[snomed].system = $sct (exactly)
-* type.coding[snomed].code 1..1
 
 * serviceType ^short = "Service type"
 * serviceType.coding 2..2
@@ -66,10 +70,10 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * period 1..1
 * period.start 1..1
 * period.end 1..1
-* reasonCode 2..*
-// * reasonCode ^slicing.discriminator.type = #value
-// * reasonCode ^slicing.discriminator.path = "system"
-// * reasonCode ^slicing.rules = #open
+* reasonCode 1..*
+* reasonCode ^slicing.discriminator.type = #value
+* reasonCode ^slicing.discriminator.path = "system"
+* reasonCode ^slicing.rules = #open
 * reasonCode contains leumit-reason-code 1..*
 * reasonCode[moh-reason-code] 1..*
 * reasonCode[moh-reason-code].coding 1..1
