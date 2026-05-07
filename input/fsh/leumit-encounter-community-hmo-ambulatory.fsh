@@ -70,16 +70,9 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * period 1..1
 * period.start 1..1
 * period.end 1..1
-* reasonCode 1..*
-* reasonCode ^slicing.discriminator.type = #value
-* reasonCode ^slicing.discriminator.path = "system"
-* reasonCode ^slicing.rules = #open
-* reasonCode contains leumit-reason-code 1..*
-* reasonCode[moh-reason-code] 1..*
-* reasonCode[moh-reason-code].coding 1..1
-* reasonCode[moh-reason-code].coding.system 1..1
-* reasonCode[moh-reason-code].coding.code 1..1
-* reasonCode[moh-reason-code].coding.display 1..1
+
+* reasonCode 1..* // Mandatory data item but reasonCode[moh-reason-code] isnt mandatory element so as long as we provide something we are OK
+* reasonCode contains leumit-reason-code 1..* // reasonCode is a mandatory data element and should include at minimum a local code
 * reasonCode[leumit-reason-code].coding 1..*
 * reasonCode[leumit-reason-code].coding.system 1..1
 * reasonCode[leumit-reason-code].coding.system = $patient-visit-reason-leumit (exactly)
