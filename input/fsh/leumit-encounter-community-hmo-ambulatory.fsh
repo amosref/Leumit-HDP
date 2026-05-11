@@ -9,11 +9,7 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
 * meta.profile contains
-   il-hdp-encounter-community-hmo-ambulatory 1..1 and
    leumit-encounter-community-hmo-ambulatory 1..1
-// Redundant as parent as already il-hdp-encounter-community-hmo-ambulatory and will cause unnecesary validation operation
-// * meta.profile[il-hdp-encounter-community-hmo-ambulatory] 1..1
-// * meta.profile[il-hdp-encounter-community-hmo-ambulatory] = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory" (exactly)
 * meta.profile[leumit-encounter-community-hmo-ambulatory] 1..1
 * meta.profile[leumit-encounter-community-hmo-ambulatory] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter-community-hmo-ambulatory" (exactly)
 
