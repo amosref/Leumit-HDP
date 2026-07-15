@@ -1,0 +1,125 @@
+{
+  "resourceType": "Encounter",
+  "id": "leumit-encounter-example-001",
+  "meta": {
+    "profile": [
+      "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter-community-hmo-ambulatory"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.leumit.co.il/identifier/encounter-id",
+      "value": "ENC-2025-001234"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://fhir.leumit.co.il/CodeSystem/tamar-visit-types",
+          "display": "ביקור רגיל"
+        },
+        {
+          "code": "390906007",
+          "system": "http://snomed.info/sct",
+          "display": "Follow-up encounter (procedure)"
+        }
+      ]
+    }
+  ],
+  "serviceType": {
+    "coding": [
+      {
+        "code": "224891009",
+        "system": "http://snomed.info/sct",
+        "display": "Healthcare services (qualifier value)"
+      },
+      {
+        "code": "79",
+        "system": "http://fhir.leumit.co.il/CodeSystem/expertise-code",
+        "display": "דיאטה"
+      }
+    ]
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "PPRF",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "display": "primary performer"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/leumit-practitioner-001"
+      }
+    }
+  ],
+  "period": {
+    "start": "2025-07-07T10:00:00+03:00",
+    "end": "2025-07-07T10:30:00+03:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "0",
+          "system": "http://fhir.health.gov.il/cs/patient-visit-reason-moh",
+          "display": "לא רשום"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "79",
+          "system": "http://fhir.leumit.co.il/CodeSystem/patient-visit-reason-leumit",
+          "display": "דיאטה"
+        }
+      ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/leumit-condition-001"
+    }
+  ],
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/leumit-condition-001"
+      }
+    }
+  ],
+  "location": [
+    {
+      "location": {
+        "reference": "Location/leumit-location-001"
+      }
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "COMMUNITY-OR-HMO",
+    "system": "http://fhir.health.gov.il/cs/il-core-encounter-class",
+    "display": "Community Care/HMO setting"
+  },
+  "subject": {
+    "reference": "Patient/leumit-patient-001"
+  },
+  "serviceProvider": {
+    "reference": "Organization/leumit-organization-001"
+  }
+}

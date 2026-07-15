@@ -20,29 +20,26 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * class.code 1..1
 * class.display 1..1
 
-* type.coding 2..2 // up from 0..* 06/07/25
+* type.coding 1..*
 * type.coding ^slicing.discriminator.type = #pattern
 * type.coding ^slicing.discriminator.path = "$this"
 * type.coding ^slicing.rules = #open
 * type.coding contains
-    snomed 1..1 and
     tamar-sys 0..1 and
     or-sys 0..1 and
     suppliers-sys 0..1
 
-* type.coding[snomed] from $vs-snomed-ct (required)
-* type.coding[snomed].system 1..1
-* type.coding[snomed].system = $sct (exactly)
-* type.coding[snomed].code 1..1
-
+* type.coding[tamar-sys] ^patternCoding.system = $tamar-visit-types
 * type.coding[tamar-sys].system 1..1
 * type.coding[tamar-sys].system = $tamar-visit-types (exactly)
 * type.coding[tamar-sys].code 1..1
 
+* type.coding[or-sys] ^patternCoding.system = $or-visit-types
 * type.coding[or-sys].system 1..1
 * type.coding[or-sys].system = $or-visit-types (exactly)
 * type.coding[or-sys].code 1..1
 
+* type.coding[suppliers-sys] ^patternCoding.system = $suppliers-visit-types
 * type.coding[suppliers-sys].system 1..1
 * type.coding[suppliers-sys].system = $suppliers-visit-types (exactly)
 * type.coding[suppliers-sys].code 1..1
@@ -74,11 +71,12 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * period.end 1..1
 
 * reasonCode 1..* // Mandatory data item but reasonCode[moh-reason-code] isnt mandatory element so as long as we provide something we are OK
+// * reasonCode[moh-reason-code] ^patternCodeableConcept.coding.system = $patient-visit-reason-moh
 * reasonCode contains leumit-reason-code 1..* // reasonCode is a mandatory data element and should include at minimum a local code
 
 * reasonCode[leumit-reason-code].coding 1..*
 * reasonCode[leumit-reason-code].coding.system 1..1
-* reasonCode[leumit-reason-code].coding.system = $patient-visit-reason-leumit (exactly)
+* reasonCode[leumit-reason-code] ^patternCodeableConcept.coding.system = $patient-visit-reason-leumit
 * reasonCode[leumit-reason-code].coding.code 1..1
 * reasonCode[leumit-reason-code].coding.display 1..1
 
