@@ -1,6 +1,6 @@
 RuleSet: ConformanceMetadata
-* ^version = "0.6.8"
+* ^version = "0.8.1"
 * ^publisher = "Leumit Health Service"
-* ^date = "2026-04-29"
+* ^date = "2026-06-07"
 * ^contact[0].telecom[0].system = #email
 * ^contact[0].telecom[0].value = "contact@example.org"
