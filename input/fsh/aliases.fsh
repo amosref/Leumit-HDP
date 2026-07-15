@@ -74,3 +74,6 @@ Alias: $vs-leumit-manifestation = http://fhir.leumit.co.il/ValueSet/Manifestatio
 Alias: $vs-il-core-allergy-intolerance-code = http://fhir.health.gov.il/ValueSet/il-core-allergy-intolerance-code
 Alias: $vs-il-core-substance = http://fhir.health.gov.il/ValueSet/il-core-substance
 Alias: $vs-il-core-manifestation = http://fhir.health.gov.il/ValueSet/il-core-manifestation
+
+Alias: $il-core-identifier-type = http://fhir.health.gov.il/cs/il-core-identifier-type
+Alias: $ext-medication-cancalled-by = http://fhir.leumit.co.il/StructureDefinition/ext-med-cancelled-by

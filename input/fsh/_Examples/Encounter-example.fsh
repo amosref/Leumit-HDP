@@ -2,8 +2,7 @@
 Instance: leumit-encounter-example-001
 InstanceOf: Encounter
 Usage: #example
-* meta.profile[0] = "http://fhir.health.gov.il/StructureDefinition/il-core-encounter"
-* meta.profile[+] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter"
+* meta.profile[+] = "http://fhir.leumit.co.il/StructureDefinition/leumit-encounter-community-hmo-ambulatory"
 * identifier.system = "http://fhir.leumit.co.il/identifier/encounter-id"
 * identifier.value = "ENC-2025-001234"
 * status = #finished
