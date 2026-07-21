@@ -30,22 +30,22 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
     or-sys 0..1 and
     suppliers-sys 0..1
 
-* type.coding[snomed] from $vs-snomed-ct (required)
-* type.coding[snomed].system 1..1
-* type.coding[snomed].system = $sct (exactly)
-* type.coding[snomed].code 1..1
+* type[snomed].coding from $vs-snomed-ct (required)
+* type[snomed].coding.system 1..1
+* type[snomed].coding.system = $sct (exactly)
+* type[snomed].coding.code 1..1
 
-* type.coding[tamar-sys].system 1..1
-* type.coding[tamar-sys].system = $tamar-visit-types (exactly)
-* type.coding[tamar-sys].code 1..1
+* type[tamar-sys].coding.system 1..1
+* type[tamar-sys].coding.system = $tamar-visit-types (exactly)
+* type[tamar-sys].coding.code 1..1
 
-* type.coding[or-sys].system 1..1
-* type.coding[or-sys].system = $or-visit-types (exactly)
-* type.coding[or-sys].code 1..1
+* type[or-sys].coding.system 1..1
+* type[or-sys].coding.system = $or-visit-types (exactly)
+* type[or-sys].coding.code 1..1
 
-* type.coding[suppliers-sys].system 1..1
-* type.coding[suppliers-sys].system = $suppliers-visit-types (exactly)
-* type.coding[suppliers-sys].code 1..1
+* type[suppliers-sys].coding.system 1..1
+* type[suppliers-sys].coding.system = $suppliers-visit-types (exactly)
+* type[suppliers-sys].coding.code 1..1
 
 * serviceType.coding 2..*
 * serviceType.coding ^slicing.discriminator.type = #value
