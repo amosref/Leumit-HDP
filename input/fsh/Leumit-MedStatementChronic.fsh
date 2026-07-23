@@ -15,14 +15,21 @@ Description: "Leumit local profile for chronic medication statements, derived fr
 * extension[courseOfTherapyType].valueCodeableConcept = http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type#chronic "Chronic therapy"
 * identifier.system 1..1
 * identifier.system = "http://fhir.leumit.co.il/identifier/tamar-chronic" (exactly)
-* statusReason.coding.system = "http://fhir.leumit.co.il/cs/tamar-status" (exactly)
+* statusReason.extension contains 
+    $ext-medication-cancalled-by named canecelled-by 0..1
+* statusReason.extension[canecelled-by].url = $ext-medication-cancalled-by (exactly)
+* statusReason.extension[canecelled-by].valueReference.reference 0..1
+* statusReason.extension[canecelled-by].valueReference.identifier 0..1
+* statusReason.extension[canecelled-by].valueReference.identifier.system 1..1
+* statusReason.extension[canecelled-by].valueReference.identifier.system = "http://fhir.leumit.co.il/identifier/automatic-practitioner" (exactly)
+* statusReason.extension[canecelled-by].valueReference.identifier.value 1..1
 * category.coding.code = #community-hmo
 * category.coding.display = "Community-hmo"
 * medicationCodeableConcept.coding 1..*
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
 * medicationCodeableConcept.coding ^slicing.rules = #open
-* medicationCodeableConcept.coding contains
+* medicationCodeableConcept.coding contains 
     yarpa 0..1 and
     local-yarpa 0..1 and
     snomed 0..1
@@ -45,40 +52,7 @@ Description: "Leumit local profile for chronic medication statements, derived fr
 
 * medicationCodeableConcept.text 0..1
 
-* dosage.route.coding ^slicing.discriminator.type = #value
-* dosage.route.coding ^slicing.discriminator.path = "system"
-* dosage.route.coding ^slicing.rules = #open
-* dosage.route.coding contains
-    snomed 0..1 and
-    local 1..1
-
-* dosage.route.coding[snomed].system 1..1
-* dosage.route.coding[snomed].system = $sct (exactly)
-* dosage.route.coding[snomed].code 0..1
-* dosage.route.coding[snomed].display 0..1
-* dosage.route.coding[snomed].userSelected = false
-
-* dosage.route.coding[local].system 1..1
-* dosage.route.coding[local].system = "http://fhir.leumit.co.il/cs/med-route" (exactly)
-* dosage.route.coding[local].code 0..1
-* dosage.route.coding[local].display 0..1
-* dosage.route.coding[local].userSelected = true
-
-* dosage.method.coding ^slicing.discriminator.type = #value
-* dosage.method.coding ^slicing.discriminator.path = "system"
-* dosage.method.coding ^slicing.rules = #open
-* dosage.method.coding contains
-    snomed 0..1 and
-    local 0..1
-
-* dosage.method.coding[snomed].system 1..1
-* dosage.method.coding[snomed].system = $sct (exactly)
-* dosage.method.coding[snomed].code 0..1
-* dosage.method.coding[snomed].display 0..1
-
-* dosage.method.coding[local].system 1..1
-* dosage.method.coding[local].system = "http://fhir.leumit.co.il/cs/med-method" (exactly)
-* dosage.method.coding[local].code 0..1
-* dosage.method.coding[local].display 0..1
-
+* dosage.route.coding.system = $sct (exactly)
+* dosage.method.coding.system = $sct (exactly)
+* dosage.additionalInstruction.coding.system = "http://fhir.leumit.co.il/cs/matan-code" (exactly)
 * subject.reference 1..1

@@ -1,0 +1,92 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "leumit-allergy-intolerance-example",
+  "meta": {
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-allergy-intolerance",
+      "http://fhir.leumit.co.il/StructureDefinition/leumit-allergy-intolerance"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "allergiesAndIntolerances",
+        "display": "רגישויות"
+      }
+    ]
+  },
+  "category": [
+    "environment"
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "472734007",
+        "system": "http://snomed.info/sct",
+        "display": "Schinus pollen (substance)"
+      },
+      {
+        "system": "http://fhir.leumit.co.il/cs/AllergyIntoleranceCode",
+        "code": "4",
+        "display": "Pollen"
+      }
+    ]
+  },
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
+          {
+            "code": "472734007",
+            "system": "http://snomed.info/sct",
+            "display": "Schinus pollen (substance)"
+          },
+          {
+            "system": "http://fhir.leumit.co.il/cs/Substance",
+            "code": "4",
+            "display": "Pollen"
+          }
+        ]
+      },
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "code": "39579001",
+              "system": "http://snomed.info/sct",
+              "display": "Anaphylaxis (disorder)"
+            },
+            {
+              "system": "http://fhir.leumit.co.il/cs/Manifestation",
+              "code": "4",
+              "display": "אנפילקסיס"
+            }
+          ]
+        }
+      ],
+      "severity": "severe"
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "display": "Active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "display": "Confirmed"
+      }
+    ]
+  },
+  "type": "allergy",
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "recordedDate": "2025-01-15"
+}

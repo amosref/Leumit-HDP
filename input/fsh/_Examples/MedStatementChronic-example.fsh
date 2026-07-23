@@ -48,14 +48,10 @@ Description: "A sample chronic medication statement for a Leumit patient on Ator
 * dosage.timing.repeat.period = 1
 * dosage.timing.repeat.periodUnit = #d
 
-* dosage.route.coding[local].system = "http://fhir.leumit.co.il/cs/med-route"
-* dosage.route.coding[local].code = #PO
-* dosage.route.coding[local].display = "דרך הפה"
-* dosage.route.coding[local].userSelected = true
-* dosage.route.coding[snomed].system = "http://snomed.info/sct"
-* dosage.route.coding[snomed].code = #26643006
-* dosage.route.coding[snomed].display = "Oral route"
-* dosage.route.coding[snomed].userSelected = false
+* dosage.route.coding.system = "http://snomed.info/sct"
+* dosage.route.coding.code = #26643006
+* dosage.route.coding.display = "Oral route"
+* dosage.route.coding.userSelected = false
 
 * dosage.doseAndRate.doseQuantity.value = 20
 * dosage.doseAndRate.doseQuantity.unit = "mg"
