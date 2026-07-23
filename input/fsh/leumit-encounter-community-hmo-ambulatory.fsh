@@ -20,20 +20,21 @@ Title: "Leumit IL-HDP Encounter Community HMO Ambulatory Profile"
 * class.code 1..1
 * class.display 1..1
 
-* type.coding 2..2 // up from 0..* 06/07/25
-* type.coding ^slicing.discriminator.type = #pattern
-* type.coding ^slicing.discriminator.path = "$this"
-* type.coding ^slicing.rules = #open
-* type.coding contains
-    snomed 1..1 and
+// * type.coding 2..2 // up from 0..* 06/07/25
+// * type.coding ^slicing.discriminator.type = #pattern
+// * type.coding ^slicing.discriminator.path = "$this"
+// * type.coding ^slicing.rules = #open
+* type contains
+    // snomed 1..1 and // See comment below
     tamar-sys 0..1 and
     or-sys 0..1 and
     suppliers-sys 0..1
 
-* type[snomed].coding from $vs-snomed-ct (required)
-* type[snomed].coding.system 1..1
-* type[snomed].coding.system = $sct (exactly)
-* type[snomed].coding.code 1..1
+// This slice was removed as 1) it overlaps type:face-to-face which is also a snomed code 2) no real way to expand all snomed
+// * type[snomed].coding from $vs-snomed-ct (required)
+// * type[snomed].coding.system 1..1
+// * type[snomed].coding.system = $sct (exactly)
+// * type[snomed].coding.code 1..1
 
 * type[tamar-sys].coding.system 1..1
 * type[tamar-sys].coding.system = $tamar-visit-types (exactly)
