@@ -92,6 +92,20 @@
   ],
   "dosageInstruction": [
     {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.leumit.co.il/cs/matan-code",
+                "code": "12",
+                "display": "יש ליטול עם אוכל"
+              }
+            ]
+          },
+          "url": "http://fhir.leumit.co.il/StructureDefinition/dosage-matan"
+        }
+      ],
       "additionalInstruction": [
         {
           "coding": [

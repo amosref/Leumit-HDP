@@ -62,6 +62,9 @@ Description: "Prescription for Atorvastatin 20mg for a Leumit patient."
 * note.text = "יש ליטול בלילה עם אוכל"
 
 * dosageInstruction.text = "טבליה אחת פעם ביום בלילה"
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.system = "http://fhir.leumit.co.il/cs/matan-code"
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.code = #12
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.display = "יש ליטול עם אוכל"
 * dosageInstruction.additionalInstruction.coding[leumit].system = "http://fhir.leumit.co.il/cs/matan-code"
 * dosageInstruction.additionalInstruction.coding[leumit].code = #12
 * dosageInstruction.additionalInstruction.coding[leumit].display = "יש ליטול עם אוכל"

@@ -5,8 +5,8 @@ Title: "Leumit MedicationRequest Prescription"
 Description: "Leumit prescription MedicationRequest profile"
 * ^status = #draft
 
-// Require both the HDP and Leumit profile URLs in meta.profile
-* meta.profile 2..*
+// Require the Leumit profile URL in meta.profile
+* meta.profile 1..*
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
@@ -60,6 +60,15 @@ Description: "Leumit prescription MedicationRequest profile"
 * courseOfTherapyType.coding[leumit].display = "Short course (acute) therapy" (exactly)
 
 * note.text 1..1
+
+* dosageInstruction.extension contains $dosage-matan named matan-code 0..1
+* dosageInstruction.extension[matan-code].url = $dosage-matan (exactly)
+* dosageInstruction.extension[matan-code].valueCodeableConcept 1..1
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding 1..1
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.system 1..1
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.system = $matan-code (exactly)
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.code 1..1
+* dosageInstruction.extension[matan-code].valueCodeableConcept.coding.display 0..1
 
 * dosageInstruction.additionalInstruction.coding ^slicing.discriminator.type = #value
 * dosageInstruction.additionalInstruction.coding ^slicing.discriminator.path = "system"
